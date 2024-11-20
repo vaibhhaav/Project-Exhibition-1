@@ -1,0 +1,200 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #ec8f49;
+    display: flex;
+    flex-direction: column; /* Ensure content is stacked vertically */
+}
+
+/* Header Section Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #4a2c23; 
+    position: fixed; /* Fix the header to the top */
+    width: 94%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Header Text and Links */
+header h1 {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #d98259;
+}
+
+/* Adjust body content to avoid overlap with fixed header */
+#chatContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100% - 70px); /* Adjust height for header */
+    position: relative;
+    background: #e68327;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 70px; /* Space for the fixed header */
+}
+
+/* Image frame styles */
+.image-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0d4c4;
+    border-bottom: 2px solid #d08d3c;
+    height: 87%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Hide the image frame */
+.image-frame.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Welcome image styling */
+.welcome-image {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 10px;
+}
+
+/* Chatbox styles */
+.chatbox {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #e0d4c4;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.message {
+    margin: 10px 20px;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    font-size: 1em;
+}
+
+.message.user {
+    background: #fcac4be3;
+    color: white;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background: #fe9956;
+    color: white;
+    align-self: flex-start;
+}
+
+/* Input bar styles */
+.chat-input {
+    display: flex;
+    border-top: 2px solid #d08d3c;
+    padding: 10px;
+    background: #fff;
+    z-index: 3; /* Keep above image */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background: #d08d3c;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-input button:hover {
+    background: #b46a26;
+}
+/* Chatbox styles */
+.chatbox {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #e0d4c4;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* Bot message container (logo and message) */
+.message.bot-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 15px;
+    background: #fe9956;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+/* Bot logo styling */
+.bot-logo {
+    width: 40px; /* Adjust logo size */
+    height: 40px;
+    margin-right: 10px; /* Space between logo and message */
+    border-radius: 50%; /* Optional: makes the logo round */
+}
+
+/* Bot message text */
+.message-text {
+    color: white;
+    font-size: 1em;
+}
+
+/* User message styles */
+.message.user {
+    background: #fcac4be3;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Bot message styling */
+.message.bot {
+    background: #fe9956;
+    color: white;
+    align-self: flex-start;
+}
+
