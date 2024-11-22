@@ -118,21 +118,18 @@
                 <img src="https://th.bing.com/th/id/OIG1.ay0Q_m6nV.esrVpYWjyI?pid=ImgGn" alt="History Illustration 1">
             </div>
             <div class="slides">
-                <img src="https://i.pinimg.com/736x/8f/d9/ca/8fd9cade9919b376e517e0a82ea39728.jpg" alt="Red Fort">
+                <img src="https://i.pinimg.com/736x/8f/d9/ca/8fd9cade9919b376e517e0a82ea39728.jpg" alt="Red Fort" onclick="showImageInfo(1)">
             </div>
             <div class="slides">
-                <img src="https://i.pinimg.com/736x/09/37/d7/0937d76c20c7c6832179ea9612c90f11.jpg" alt="Taj Mahal">
+                <img src="https://i.pinimg.com/736x/09/37/d7/0937d76c20c7c6832179ea9612c90f11.jpg" alt="Taj Mahal" onclick="showImageInfo(2)">
             </div>
             <div class="slides">
-                <img src="https://i.pinimg.com/736x/20/ef/2e/20ef2efb0dd30d2908bfc91a73fcd28f.jpg" alt="Nalanada University">
+                <img src="https://i.pinimg.com/736x/20/ef/2e/20ef2efb0dd30d2908bfc91a73fcd28f.jpg" alt="Nalanda University" onclick="showImageInfo(3)">
             </div>
             <div class="slides">
-                <img src="https://i.pinimg.com/736x/f1/fe/8f/f1fe8fa822b14ad4d62aa89084d3a9f8.jpg" alt="Hawa Mahal">
+                <img src="https://i.pinimg.com/736x/f1/fe/8f/f1fe8fa822b14ad4d62aa89084d3a9f8.jpg" alt="Hawa Mahal" onclick="showImageInfo(4)">
             </div>
-            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-        </div>
-        <div class="dots-container">
+        </div><div class="dots-container">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -178,13 +175,11 @@
     </section>
 
     <script>
-        function showContactInfo() {
-            var contactInfo = document.getElementById('contact-info');
-            contactInfo.style.display = 'block';
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            showSlides();
+        });
 
         let slideIndex = 0;
-        showSlides();
 
         function showSlides() {
             let i;
@@ -203,16 +198,55 @@
             setTimeout(showSlides, 4000); // Change image every 4 seconds
         }
 
-        function plusSlides(n) {
-            slideIndex += n;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            if (slideIndex < 1) {slideIndex = slides.length}
-            showSlides();
+        function currentSlide(n) {
+            showSpecificSlide(slideIndex = n);
         }
 
-        function currentSlide(n) {
-            slideIndex = n;
-            showSlides();
+        function showSpecificSlide(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        function showImageInfo(imageIndex) {
+            let fileName = "";
+            switch(imageIndex) {
+                case 1:
+                    fileName = "Red%20Fort.html"; // Replace with your URL
+                    break;
+                case 2:
+                    fileName = "Taj%20Mahal.html"// Replace with your URL
+                    break;
+                case 3:
+                    fileName = "Nalanda%20University.html"// Replace with your URL
+                    break;
+                case 4:
+                    fileName = "Hawa%20Mahal.html"// Replace with your URL
+                    break;
+                default:
+                    fileName = "#"; // Fallback URL
+                    break;
+            }
+            window.location.href = fileName;
+        }
+
+        function showContactInfo() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === "none") {
+                contactInfo.style.display = "block";
+            } else {
+                contactInfo.style.display = "none";
+            }
         }
     </script>
 </body>
