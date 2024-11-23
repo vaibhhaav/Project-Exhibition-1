@@ -26,22 +26,22 @@
         .slideshow-container {
             position: relative;
             max-width: 100%;
-            height: 500px; /* Fixed height for the slideshow container */
+            height: 500px; 
             margin: auto;
             overflow: hidden;
             border-radius: 15px;
-            background-color: #f4a460; /* Background color to maintain frame size */
+            background-color: #f4a460;
         }
 
         .slides {
             display: none;
-            height: 100%; /* Ensure slides take up the full height of the container */
+            height: 100%; 
         }
 
         .slides img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure images cover the entire slide area */
+            object-fit: cover;
             border-radius: 15px;
             transition: transform 0.3s;
         }
@@ -195,7 +195,7 @@
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
-            setTimeout(showSlides, 4000); // Change image every 4 seconds
+            setTimeout(showSlides, 4000); 
         }
 
         function currentSlide(n) {
@@ -222,19 +222,19 @@
             let fileName = "";
             switch(imageIndex) {
                 case 1:
-                    fileName = "Red%20Fort.html"; // Replace with your URL
+                    fileName = "Red%20Fort.html"; 
                     break;
                 case 2:
-                    fileName = "Taj%20Mahal.html"// Replace with your URL
+                    fileName = "Taj%20Mahal.html"
                     break;
                 case 3:
-                    fileName = "Nalanda%20University.html"// Replace with your URL
+                    fileName = "Nalanda%20University.html"
                     break;
                 case 4:
-                    fileName = "Hawa%20Mahal.html"// Replace with your URL
+                    fileName = "Hawa%20Mahal.html"
                     break;
                 default:
-                    fileName = "#"; // Fallback URL
+                    fileName = "#";
                     break;
             }
             window.location.href = fileName;

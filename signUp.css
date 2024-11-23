@@ -52,17 +52,17 @@ section {
 }
 
 .signup-section h2 {
-    font-size: 36px;  /* Increased font size */
-    margin-bottom: 30px;  /* Increased space between heading and form */
+    font-size: 36px;  
+    margin-bottom: 30px; 
 }
 
 .signup-container {
-    max-width: 600px;  /* Increased width for a larger frame */
+    max-width: 600px; 
     width: 100%;
-    padding: 40px;  /* Increased padding inside the box */
+    padding: 40px;  
     background-color: white;
     border: 2px solid #d98259;
-    border-radius: 15px;  /* Rounded corners */
+    border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -71,22 +71,22 @@ section {
 
 .signup-container input {
     width: 100%;
-    padding: 18px;  /* Increased padding inside input fields */
-    margin: 12px 0;  /* Increased space between input fields */
-    border-radius: 10px;  /* Rounded corners for inputs */
+    padding: 18px; 
+    margin: 12px 0;  
+    border-radius: 10px;  
     border: 1px solid #ccc;
-    font-size: 18px;  /* Increased font size */
+    font-size: 18px; 
 }
 
 .signup-container button {
-    padding: 18px 24px;  /* Increased padding inside button */
+    padding: 18px 24px;  
     width: 100%;
     background-color: #d98259;
     color: white;
     border: none;
-    border-radius: 10px;  /* Rounded corners for the button */
+    border-radius: 10px; 
     cursor: pointer;
-    font-size: 20px;  /* Increased font size */
+    font-size: 20px; 
     transition: background-color 0.3s;
     text-decoration: none;
     display: inline-block;

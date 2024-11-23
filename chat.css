@@ -1,5 +1,4 @@
-/* General reset */
-body, html {
+    body, html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -7,24 +6,23 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #ec8f49;
     display: flex;
-    flex-direction: column; /* Ensure content is stacked vertically */
+    flex-direction: column; 
 }
 
-/* Header Section Styles */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #4a2c23; 
-    position: fixed; /* Fix the header to the top */
+    position: fixed;
     width: 94%;
     top: 0;
     left: 0;
     z-index: 10;
 }
 
-/* Header Text and Links */
 header h1 {
     font-size: 28px;
     color: white;
@@ -43,22 +41,20 @@ header nav a:hover {
     color: #d98259;
 }
 
-/* Adjust body content to avoid overlap with fixed header */
 #chatContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    height: calc(100% - 70px); /* Adjust height for header */
+    height: calc(100% - 70px);
     position: relative;
     background: #e68327;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin-top: 70px; /* Space for the fixed header */
+    margin-top: 70px;
 }
 
-/* Image frame styles */
 .image-frame {
     display: flex;
     justify-content: center;
@@ -72,20 +68,18 @@ header nav a:hover {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* Hide the image frame */
 .image-frame.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
-/* Welcome image styling */
+
 .welcome-image {
     max-width: 95%;
     max-height: 95%;
     border-radius: 10px;
 }
 
-/* Chatbox styles */
 .chatbox {
     flex: 1;
     padding: 20px;
@@ -116,13 +110,13 @@ header nav a:hover {
     align-self: flex-start;
 }
 
-/* Input bar styles */
+
 .chat-input {
     display: flex;
     border-top: 2px solid #d08d3c;
     padding: 10px;
     background: #fff;
-    z-index: 3; /* Keep above image */
+    z-index: 3;
 }
 
 .chat-input input {
@@ -148,7 +142,7 @@ header nav a:hover {
 .chat-input button:hover {
     background: #b46a26;
 }
-/* Chatbox styles */
+
 .chatbox {
     flex: 1;
     padding: 20px;
@@ -159,7 +153,6 @@ header nav a:hover {
     z-index: 1;
 }
 
-/* Bot message container (logo and message) */
 .message.bot-container {
     display: flex;
     align-items: center;
@@ -170,28 +163,24 @@ header nav a:hover {
     max-width: 60%;
 }
 
-/* Bot logo styling */
-.bot-logo {
-    width: 40px; /* Adjust logo size */
+    .bot-logo {
+    width: 40px;
     height: 40px;
-    margin-right: 10px; /* Space between logo and message */
-    border-radius: 50%; /* Optional: makes the logo round */
+    margin-right: 10px;
+    border-radius: 50%; 
 }
 
-/* Bot message text */
 .message-text {
     color: white;
     font-size: 1em;
 }
 
-/* User message styles */
 .message.user {
     background: #fcac4be3;
     color: white;
     align-self: flex-end;
 }
 
-/* Bot message styling */
 .message.bot {
     background: #fe9956;
     color: white;
